@@ -104,24 +104,6 @@ const Drivers: React.FC = () => {
       const response = await driversAPI.createDriver(fd);
 
       if (response.success) {
-        // Transform backend response to match frontend interface
-        const newDriver: Driver = {
-          driverId: response.driver.id,
-          name: response.driver.name,
-          phone: response.driver.phone,
-          email: response.driver.email,
-          username: response.driver.username,
-          password: response.password,
-          status: response.driver.status,
-          has_face_registered: response.driver.has_face_registered ?? false,
-          assignedBusId: response.driver.assignedBus === 'No' ? null : response.driver.assignedBus,
-          id: response.driver.id,
-          assignedBus: response.driver.assignedBus,
-        };
-
-        // Update local state
-        setDrivers(prev => [...prev, newDriver]);
-
         // Set credentials for popup
         setNewDriverCredentials({
           username: response.driver.username,
@@ -129,14 +111,25 @@ const Drivers: React.FC = () => {
           name: response.driver.name
         });
 
-        // Close modal and show credentials
+        // Close add-modal, show credentials, then refresh the full list
         setShowModal(false);
         setShowCredentialsModal(true);
+        fetchDrivers(); // re-fetch from backend so new driver appears immediately
 
         // Reset form
         setFormData({ name: '', phone: '', email: '' });
         setPhotoFile(null);
         setPhotoPreview(null);
+
+        // Start background polling to detect face registration completion
+        // (face is registered async on the backend; poll every 10s for up to 2 min)
+        let pollCount = 0;
+        const pollInterval = setInterval(async () => {
+          pollCount++;
+          if (pollCount > 12) { clearInterval(pollInterval); return; }
+          await fetchDrivers();
+          // No need to manually check — fetchDrivers re-sets drivers state
+        }, 10000);
       } else {
         setError(response.message || 'Failed to register driver');
       }
@@ -824,7 +817,10 @@ const Drivers: React.FC = () => {
                   {copiedField === 'modal-both' ? 'Copied!' : 'Copy Both'}
                 </motion.button>
                 <motion.button
-                  onClick={() => setShowCredentialsModal(false)}
+                  onClick={() => {
+                    setShowCredentialsModal(false);
+                    fetchDrivers(); // refresh one more time when admin closes
+                  }}
                   className="flex-1 px-4 py-3 bg-neutral-200 text-neutral-800 rounded-xl font-semibold hover:bg-neutral-300 transition-all duration-300"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
