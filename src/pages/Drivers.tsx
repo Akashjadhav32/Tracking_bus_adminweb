@@ -105,14 +105,18 @@ const Drivers: React.FC = () => {
     setError('');
 
     try {
+      if (!photoFile) {
+        setError('A face photo is mandatory to enable facial recognition for this driver.');
+        setIsSubmitting(false);
+        return;
+      }
+
       // Build FormData so we can include the optional photo for face registration
       const fd = new FormData();
       fd.append('name', formData.name);
       fd.append('email', formData.email);
       fd.append('phone', formData.phone);
-      if (photoFile) {
-        fd.append('photo', photoFile);
-      }
+      fd.append('photo', photoFile);
 
       const response = await driversAPI.createDriver(fd);
 
