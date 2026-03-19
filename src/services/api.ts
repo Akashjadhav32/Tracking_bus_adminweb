@@ -5,6 +5,7 @@ const API_BASE_URL = 'https://akash123-071-tracking-backend.hf.space/api';
 // Create axios instance with default config
 const api = axios.create({
   baseURL: API_BASE_URL,
+  timeout: 90000, // 90s – enough for face-API cold-start on HuggingFace free tier
   headers: {
     'Content-Type': 'application/json',
   },
@@ -104,8 +105,11 @@ export const busesAPI = {
 export const driversAPI = {
   // Accept FormData so the admin can include an optional face photo
   createDriver: async (formData: FormData) => {
+    // Do NOT set Content-Type manually — axios must set it with the correct
+    // multipart boundary, otherwise the backend cannot parse the file upload.
     const response = await api.post('/admin/drivers', formData, {
-      headers: { 'Content-Type': 'multipart/form-data' },
+      headers: { 'Content-Type': undefined },
+      timeout: 90000,
     });
     return response.data;
   },

@@ -21,7 +21,6 @@ const Drivers: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [drivers, setDrivers] = useState<Driver[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>('');
   const [showModal, setShowModal] = useState(false);
   const [showCredentialsModal, setShowCredentialsModal] = useState(false);
@@ -35,7 +34,6 @@ const Drivers: React.FC = () => {
 
   const fetchDrivers = async () => {
     try {
-      setLoading(true);
       const response = await driversAPI.getAllDrivers();
       // Transform backend data to match frontend interface
       const transformedDrivers = Array.isArray(response) ? response.map((driver: any) => ({
@@ -57,22 +55,7 @@ const Drivers: React.FC = () => {
     } catch (error: any) {
       console.error('Error fetching drivers:', error);
       setError('Failed to load drivers. Please try again.');
-    } finally {
-      setLoading(false);
     }
-  };
-
-  const generateRandomUsername = (): string => {
-    return 'driver' + Math.floor(Math.random() * 10000).toString().padStart(4, '0');
-  };
-
-  const generateRandomPassword = (): string => {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
-    let password = '';
-    for (let i = 0; i < 10; i++) {
-      password += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    return password;
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -158,12 +141,14 @@ const Drivers: React.FC = () => {
         setError(response.message || 'Failed to register driver');
       }
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error registering driver:', error);
-      if (error.response?.data?.message) {
+      if (error.code === 'ECONNABORTED' || error.message?.toLowerCase().includes('timeout')) {
+        setError('Request timed out. The Face Recognition server may be starting up (cold start can take up to 60s). Please try again in a moment.');
+      } else if (error.response?.data?.message) {
         setError(error.response.data.message);
       } else {
-        setError('Failed to register driver. Please try again.');
+        setError('Failed to register driver. Please check your connection and try again.');
       }
     } finally {
       setIsSubmitting(false);
@@ -237,7 +222,7 @@ const Drivers: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
+        ease: 'easeOut' as const,
       }
     }
   };
@@ -254,7 +239,7 @@ const Drivers: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.3,
-        ease: "easeOut"
+        ease: 'easeOut' as const,
       }
     },
     exit: {
@@ -624,26 +609,31 @@ const Drivers: React.FC = () => {
                   />
                 </div>
 
-                {/* Face Photo Upload */}
+                {/* Face Photo Upload — REQUIRED */}
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 mb-2">
-                    Face Photo <span className="text-neutral-400 font-normal">(for facial recognition)</span>
+                    Face Photo <span className="text-red-500 font-bold">*</span>{' '}
+                    <span className="text-neutral-400 font-normal">(required for facial recognition)</span>
                   </label>
                   <div
-                    className="border-2 border-dashed border-neutral-300 rounded-xl p-4 text-center cursor-pointer hover:border-info-400 transition-colors duration-200"
+                    className={`border-2 border-dashed rounded-xl p-4 text-center cursor-pointer transition-colors duration-200 ${
+                      photoFile
+                        ? 'border-green-400 bg-green-50'
+                        : 'border-red-300 hover:border-red-400 bg-red-50'
+                    }`}
                     onClick={() => fileInputRef.current?.click()}
                   >
                     {photoPreview ? (
                       <div className="flex flex-col items-center gap-2">
-                        <img src={photoPreview} alt="Preview" className="h-24 w-24 object-cover rounded-full border-2 border-info-300" />
+                        <img src={photoPreview} alt="Preview" className="h-24 w-24 object-cover rounded-full border-2 border-green-400" />
                         <span className="text-xs text-neutral-500">{photoFile?.name}</span>
-                        <span className="text-xs text-info-600 font-medium">Click to change</span>
+                        <span className="text-xs text-green-600 font-medium">✓ Photo ready — click to change</span>
                       </div>
                     ) : (
                       <div className="flex flex-col items-center gap-2 py-2">
-                        <Camera size={28} className="text-neutral-400" />
-                        <span className="text-sm text-neutral-500">Click to upload a face photo</span>
-                        <span className="text-xs text-neutral-400">JPG, PNG up to 5MB</span>
+                        <Camera size={28} className="text-red-400" />
+                        <span className="text-sm text-red-600 font-semibold">Click to upload a face photo</span>
+                        <span className="text-xs text-neutral-400">JPG, PNG up to 5MB — required to enable login</span>
                       </div>
                     )}
                   </div>
@@ -680,7 +670,7 @@ const Drivers: React.FC = () => {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Adding...
+                        Registering Face (up to 60s)...
                       </span>
                     ) : (
                       <>
