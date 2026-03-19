@@ -1,0 +1,352 @@
+[
+  {
+    "logId": "l001",
+    "action": "Driver Added",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-27T10:00:00Z",
+    "details": "New driver Rajesh Kumar registered"
+  },
+  {
+    "logId": "l002",
+    "action": "Bus Assigned to Driver",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-27T11:30:00Z",
+    "details": "Bus MH12 AB 1234 assigned to driver Amit Singh"
+  },
+  {
+    "logId": "l003",
+    "action": "Route Created",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-27T09:15:00Z",
+    "details": "New route 'Connaught Place to Noida Sec-62' created"
+  },
+  {
+    "logId": "l004",
+    "action": "Driver Status Changed",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-27T14:20:00Z",
+    "details": "Driver Suresh Sharma status changed to inactive"
+  },
+  {
+    "logId": "l005",
+    "action": "Bus Maintenance Scheduled",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-27T08:45:00Z",
+    "details": "Maintenance scheduled for bus UP16 EF 9012"
+  },
+  {
+    "logId": "l006",
+    "action": "Route Updated",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-26T16:30:00Z",
+    "details": "Route R12 stops updated"
+  },
+  {
+    "logId": "l007",
+    "action": "Driver Login",
+    "performedBy": "Rajesh Kumar",
+    "timestamp": "2025-01-26T07:00:00Z",
+    "details": "Driver logged into mobile app"
+  },
+  {
+    "logId": "l008",
+    "action": "Bus Location Updated",
+    "performedBy": "System",
+    "timestamp": "2025-01-26T15:45:00Z",
+    "details": "GPS location updated for bus DL01 CD 5678"
+  },
+  {
+    "logId": "l009",
+    "action": "Emergency Alert",
+    "performedBy": "System",
+    "timestamp": "2025-01-26T12:10:00Z",
+    "details": "Emergency button pressed on bus MH12 AB 1234"
+  },
+  {
+    "logId": "l010",
+    "action": "Report Generated",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-26T18:00:00Z",
+    "details": "Monthly performance report generated"
+  },
+  {
+    "logId": "l011",
+    "action": "Driver Removed",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-25T13:20:00Z",
+    "details": "Driver account deactivated for policy violation"
+  },
+  {
+    "logId": "l012",
+    "action": "Bus Added",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-25T10:30:00Z",
+    "details": "New bus HR26 GH 3456 added to fleet"
+  },
+  {
+    "logId": "l013",
+    "action": "Route Assignment",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-25T11:45:00Z",
+    "details": "Bus b002 assigned to route R12"
+  },
+  {
+    "logId": "l014",
+    "action": "System Backup",
+    "performedBy": "System",
+    "timestamp": "2025-01-25T02:00:00Z",
+    "details": "Daily system backup completed successfully"
+  },
+  {
+    "logId": "l015",
+    "action": "User Session Expired",
+    "performedBy": "System",
+    "timestamp": "2025-01-24T23:30:00Z",
+    "details": "Admin session expired due to inactivity"
+  },
+  {
+    "logId": "l016",
+    "action": "Driver Added",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-24T14:15:00Z",
+    "details": "New driver Priya Sharma registered"
+  },
+  {
+    "logId": "l017",
+    "action": "Bus Maintenance Completed",
+    "performedBy": "System",
+    "timestamp": "2025-01-24T16:20:00Z",
+    "details": "Maintenance completed for bus MH12 AB 1234"
+  },
+  {
+    "logId": "l018",
+    "action": "Route Created",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-24T09:30:00Z",
+    "details": "New route 'Gurgaon to Delhi Airport' created"
+  },
+  {
+    "logId": "l019",
+    "action": "Driver Login",
+    "performedBy": "Amit Singh",
+    "timestamp": "2025-01-24T06:45:00Z",
+    "details": "Driver logged into mobile app"
+  },
+  {
+    "logId": "l020",
+    "action": "Bus Location Updated",
+    "performedBy": "System",
+    "timestamp": "2025-01-24T13:22:00Z",
+    "details": "GPS location updated for bus UP16 EF 9012"
+  },
+  {
+    "logId": "l021",
+    "action": "Driver Status Changed",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-23T11:10:00Z",
+    "details": "Driver Vikram Yadav status changed to active"
+  },
+  {
+    "logId": "l022",
+    "action": "Bus Added",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-23T15:45:00Z",
+    "details": "New bus DL05 XY 7890 added to fleet"
+  },
+  {
+    "logId": "l023",
+    "action": "Route Updated",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-23T10:20:00Z",
+    "details": "Route R15 schedule updated"
+  },
+  {
+    "logId": "l024",
+    "action": "Emergency Alert",
+    "performedBy": "System",
+    "timestamp": "2025-01-23T17:35:00Z",
+    "details": "Emergency button pressed on bus HR26 GH 3456"
+  },
+  {
+    "logId": "l025",
+    "action": "Driver Login",
+    "performedBy": "Suresh Sharma",
+    "timestamp": "2025-01-23T07:15:00Z",
+    "details": "Driver logged into mobile app"
+  },
+  {
+    "logId": "l026",
+    "action": "Bus Maintenance Scheduled",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-22T12:30:00Z",
+    "details": "Maintenance scheduled for bus DL01 CD 5678"
+  },
+  {
+    "logId": "l027",
+    "action": "Route Assignment",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-22T14:50:00Z",
+    "details": "Bus b005 assigned to route R18"
+  },
+  {
+    "logId": "l028",
+    "action": "Driver Added",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-22T09:40:00Z",
+    "details": "New driver Anita Gupta registered"
+  },
+  {
+    "logId": "l029",
+    "action": "Bus Location Updated",
+    "performedBy": "System",
+    "timestamp": "2025-01-22T16:18:00Z",
+    "details": "GPS location updated for bus DL05 XY 7890"
+  },
+  {
+    "logId": "l030",
+    "action": "System Backup",
+    "performedBy": "System",
+    "timestamp": "2025-01-22T02:00:00Z",
+    "details": "Daily system backup completed successfully"
+  },
+  {
+    "logId": "l031",
+    "action": "Report Generated",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-21T19:25:00Z",
+    "details": "Weekly performance report generated"
+  },
+  {
+    "logId": "l032",
+    "action": "Driver Status Changed",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-21T13:45:00Z",
+    "details": "Driver Anita Gupta status changed to active"
+  },
+  {
+    "logId": "l033",
+    "action": "Bus Added",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-21T11:20:00Z",
+    "details": "New bus PB03 MN 4567 added to fleet"
+  },
+  {
+    "logId": "l034",
+    "action": "Route Created",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-21T08:55:00Z",
+    "details": "New route 'Chandigarh to Mohali' created"
+  },
+  {
+    "logId": "l035",
+    "action": "Driver Login",
+    "performedBy": "Priya Sharma",
+    "timestamp": "2025-01-21T06:30:00Z",
+    "details": "Driver logged into mobile app"
+  },
+  {
+    "logId": "l036",
+    "action": "Bus Maintenance Completed",
+    "performedBy": "System",
+    "timestamp": "2025-01-20T15:40:00Z",
+    "details": "Maintenance completed for bus DL01 CD 5678"
+  },
+  {
+    "logId": "l037",
+    "action": "Emergency Alert",
+    "performedBy": "System",
+    "timestamp": "2025-01-20T12:25:00Z",
+    "details": "Emergency button pressed on bus PB03 MN 4567"
+  },
+  {
+    "logId": "l038",
+    "action": "Route Updated",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-20T10:15:00Z",
+    "details": "Route R20 stops updated"
+  },
+  {
+    "logId": "l039",
+    "action": "Bus Location Updated",
+    "performedBy": "System",
+    "timestamp": "2025-01-20T14:33:00Z",
+    "details": "GPS location updated for bus PB03 MN 4567"
+  },
+  {
+    "logId": "l040",
+    "action": "Driver Removed",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-19T16:50:00Z",
+    "details": "Driver account deactivated for medical leave"
+  },
+  {
+    "logId": "l041",
+    "action": "Bus Added",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-19T09:25:00Z",
+    "details": "New bus RJ14 QR 8901 added to fleet"
+  },
+  {
+    "logId": "l042",
+    "action": "Route Assignment",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-19T11:40:00Z",
+    "details": "Bus b008 assigned to route R22"
+  },
+  {
+    "logId": "l043",
+    "action": "Driver Login",
+    "performedBy": "Vikram Yadav",
+    "timestamp": "2025-01-19T07:20:00Z",
+    "details": "Driver logged into mobile app"
+  },
+  {
+    "logId": "l044",
+    "action": "System Backup",
+    "performedBy": "System",
+    "timestamp": "2025-01-19T02:00:00Z",
+    "details": "Daily system backup completed successfully"
+  },
+  {
+    "logId": "l045",
+    "action": "Bus Maintenance Scheduled",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-18T13:15:00Z",
+    "details": "Maintenance scheduled for bus RJ14 QR 8901"
+  },
+  {
+    "logId": "l046",
+    "action": "Driver Added",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-18T10:30:00Z",
+    "details": "New driver Rohit Verma registered"
+  },
+  {
+    "logId": "l047",
+    "action": "Route Created",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-18T08:45:00Z",
+    "details": "New route 'Jaipur to Ajmer' created"
+  },
+  {
+    "logId": "l048",
+    "action": "Bus Location Updated",
+    "performedBy": "System",
+    "timestamp": "2025-01-18T15:22:00Z",
+    "details": "GPS location updated for bus RJ14 QR 8901"
+  },
+  {
+    "logId": "l049",
+    "action": "Driver Status Changed",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-17T12:10:00Z",
+    "details": "Driver Rohit Verma status changed to active"
+  },
+  {
+    "logId": "l050",
+    "action": "Report Generated",
+    "performedBy": "Admin",
+    "timestamp": "2025-01-17T18:45:00Z",
+    "details": "Daily operations report generated"
+  }
+]

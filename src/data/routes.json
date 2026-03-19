@@ -1,0 +1,11 @@
+[
+  {
+    "routeId": "r12",
+    "routeName": "Connaught Place to Noida Sec-62",
+    "stops": [
+      { "stopId": "s1", "name": "Connaught Place", "latitude": 28.6328, "longitude": 77.2197 },
+      { "stopId": "s2", "name": "Akshardham", "latitude": 28.6129, "longitude": 77.2773 },
+      { "stopId": "s3", "name": "Noida Sec-62", "latitude": 28.6280, "longitude": 77.3649 }
+    ]
+  }
+]

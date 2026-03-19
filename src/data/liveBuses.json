@@ -1,0 +1,50 @@
+[
+  {
+    "busId": "b001",
+    "busNumber": "MH12 AB 1234",
+    "driverName": "Rajesh Kumar",
+    "latitude": 28.6328,
+    "longitude": 77.2197,
+    "currentStop": "Connaught Place",
+    "routeId": "r12",
+    "status": "moving",
+    "speed": 45,
+    "lastUpdated": "2025-01-27T10:30:00Z"
+  },
+  {
+    "busId": "b002",
+    "busNumber": "DL01 CD 5678",
+    "driverName": "Amit Singh",
+    "latitude": 28.6280,
+    "longitude": 77.3649,
+    "currentStop": "Noida Sec-62",
+    "routeId": "r12",
+    "status": "stopped",
+    "speed": 0,
+    "lastUpdated": "2025-01-27T10:28:00Z"
+  },
+  {
+    "busId": "b003",
+    "busNumber": "UP16 EF 9012",
+    "driverName": "Suresh Sharma",
+    "latitude": 28.6129,
+    "longitude": 77.2773,
+    "currentStop": "Akshardham",
+    "routeId": "r12",
+    "status": "moving",
+    "speed": 32,
+    "lastUpdated": "2025-01-27T10:32:00Z"
+  },
+  {
+    "busId": "b004",
+    "busNumber": "HR26 GH 3456",
+    "driverName": "Vikram Yadav",
+    "latitude": 28.6330,
+    "longitude": 77.2194,
+    "currentStop": "Rajiv Chowk",
+    "routeId": "r13",
+    "status": "idle",
+    "speed": 0,
+    "lastUpdated": "2025-01-27T10:25:00Z"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "driverId": "d123",
+    "name": "Rajesh Kumar",
+    "phone": "+91-9876543210",
+    "email": "rajesh@example.com",
+    "username": "driver1234",
+    "password": "hashedPasswordHere",
+    "status": "active",
+    "assignedBusId": null
+  },
+  {
+    "driverId": "d124",
+    "name": "Amit Singh",
+    "phone": "+91-9876543211",
+    "email": "amit@example.com",
+    "username": "driver5678",
+    "password": "hashedPasswordHere",
+    "status": "active",
+    "assignedBusId": "bus001"
+  },
+  {
+    "driverId": "d125",
+    "name": "Suresh Sharma",
+    "phone": "+91-9876543212",
+    "email": "suresh@example.com",
+    "username": "driver9012",
+    "password": "hashedPasswordHere",
+    "status": "inactive",
+    "assignedBusId": null
+  }
+]

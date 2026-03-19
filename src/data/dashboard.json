@@ -1,0 +1,37 @@
+{
+  "stats": {
+    "drivers": {
+      "total": 24,
+      "active": 18,
+      "inactive": 6
+    },
+    "buses": {
+      "total": 15,
+      "active": 12,
+      "inactive": 3
+    },
+    "routes": {
+      "total": 8,
+      "active": 6,
+      "inactive": 2
+    },
+    "journeys": {
+      "today": 45,
+      "thisWeek": 312,
+      "thisMonth": 1248
+    }
+  },
+  "charts": {
+    "busStatus": [
+      { "name": "Active Buses", "value": 12, "color": "#10B981" },
+      { "name": "Inactive Buses", "value": 3, "color": "#EF4444" }
+    ],
+    "busesPerRoute": [
+      { "route": "Route A", "buses": 4, "routeId": "R001" },
+      { "route": "Route B", "buses": 3, "routeId": "R002" },
+      { "route": "Route C", "buses": 2, "routeId": "R003" },
+      { "route": "Route D", "buses": 3, "routeId": "R004" },
+      { "route": "Route E", "buses": 3, "routeId": "R005" }
+    ]
+  }
+}

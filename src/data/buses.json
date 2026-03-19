@@ -1,0 +1,26 @@
+[
+  {
+    "busId": "b001",
+    "busNumber": "MH12 AB 1234",
+    "capacity": 50,
+    "driverId": "d124",
+    "routeId": "r12",
+    "status": "active"
+  },
+  {
+    "busId": "b002",
+    "busNumber": "DL01 CD 5678",
+    "capacity": 45,
+    "driverId": "d123",
+    "routeId": "r12",
+    "status": "active"
+  },
+  {
+    "busId": "b003",
+    "busNumber": "UP16 EF 9012",
+    "capacity": 55,
+    "driverId": null,
+    "routeId": null,
+    "status": "inactive"
+  }
+]

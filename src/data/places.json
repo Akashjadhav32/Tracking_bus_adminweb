@@ -1,0 +1,23 @@
+[
+  { "name": "Shivneri Vashi Bus Stop", "latitude": 19.077065, "longitude": 72.998993 },
+  { "name": "Vashi Bus Depot (Juhu Nagar)", "latitude": 19.086890, "longitude": 73.003290 },
+  { "name": "Sanpada Railway Station", "latitude": 19.067800, "longitude": 73.009800 },
+  { "name": "Turbhe MIDC Bus Stop", "latitude": 19.077131, "longitude": 73.021341 },
+  { "name": "Turbhe Naka Bus Stop", "latitude": 19.069600, "longitude": 73.019500 },
+  { "name": "Sector 15 Bus Stop", "latitude": 19.063790, "longitude": 73.010420 },
+  { "name": "Kopar Khairane Bus Stop", "latitude": 19.103055, "longitude": 73.010555 },
+  { "name": "Ghansoli Bus Stop", "latitude": 19.115898, "longitude": 73.005420 },
+  { "name": "Rabale Bus Stop", "latitude": 19.142215, "longitude": 73.003899 },
+  { "name": "Airoli Bus Stop", "latitude": 19.156600, "longitude": 72.998500 },
+  { "name": "CBD Belapur Bus Stop", "latitude": 19.027993, "longitude": 73.064425 },
+  { "name": "Kharghar Bus Stop", "latitude": 19.059000, "longitude": 73.063000 },
+  { "name": "Kamothe Bus Stop", "latitude": 18.987800, "longitude": 73.069800 },
+  { "name": "Kalamboli Bus Stop", "latitude": 18.995500, "longitude": 73.106500 },
+  { "name": "Panvel Railway Station (W)", "latitude": 18.988022, "longitude": 73.110996 },
+  { "name": "Bhajakhana", "latitude": 30.459405, "longitude": 74.9809951 },
+  { "name": "Dod", "latitude": 30.4719093, "longitude": 75.0037222 },
+  { "name": "Sirye Wala", "latitude": 30.4868511, "longitude": 75.0399858 },
+  { "name": "Bhagta", "latitude": 30.4848851, "longitude": 75.0991217 },
+  { "name": "Gurusar", "latitude": 30.4911637, "longitude": 75.1456886 }
+]
+
